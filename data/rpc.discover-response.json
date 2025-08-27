@@ -1,0 +1,1521 @@
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "openrpc": "1.3.2",
+    "info": {
+      "title": "Minecraft Server JSON-RPC",
+      "version": "1.0.0"
+    },
+    "methods": [
+      {
+        "name": "minecraft:allowlist",
+        "description": "Get the allowlist",
+        "params": [],
+        "result": {
+          "name": "allowlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:allowlist/set",
+        "description": "Set the allowlist",
+        "params": [
+          {
+            "name": "players",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/player"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "allowlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:allowlist/add",
+        "description": "Add players to allowlist",
+        "params": [
+          {
+            "name": "add",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/player"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "allowlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:allowlist/remove",
+        "description": "Remove players from allowlist",
+        "params": [
+          {
+            "name": "remove",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/player"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "allowlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:allowlist/clear",
+        "description": "Clear all players in allowlist",
+        "params": [],
+        "result": {
+          "name": "allowlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:bans",
+        "description": "Get the ban list",
+        "params": [],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/user_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:bans/set",
+        "description": "Set the banlist",
+        "params": [
+          {
+            "name": "bans",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/user_ban"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/user_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:bans/add",
+        "description": "Add players to ban list",
+        "params": [
+          {
+            "name": "add",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/user_ban"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/user_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:bans/remove",
+        "description": "Remove players from ban list",
+        "params": [
+          {
+            "name": "remove",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/player"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/user_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:bans/clear",
+        "description": "Clear all players in ban list",
+        "params": [],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/user_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:ip_bans",
+        "description": "Get the ip ban list",
+        "params": [],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:ip_bans/set",
+        "description": "Set the ip banlist",
+        "params": [
+          {
+            "name": "banlist",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/ip_ban"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/ip_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:ip_bans/add",
+        "description": "Add ip to ban list",
+        "params": [
+          {
+            "name": "add",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/incoming_ip_ban"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/ip_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:ip_bans/remove",
+        "description": "Remove ip from ban list",
+        "params": [
+          {
+            "name": "ip",
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/ip_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:ip_bans/clear",
+        "description": "Clear all ips in ban list",
+        "params": [],
+        "result": {
+          "name": "banlist",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/ip_ban"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:players",
+        "description": "Get all connected players",
+        "params": [],
+        "result": {
+          "name": "players",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:players/kick",
+        "description": "Kick players",
+        "params": [
+          {
+            "name": "kick",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/kick_player"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "kicked",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/player"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:operators",
+        "description": "Get all oped players",
+        "params": [],
+        "result": {
+          "name": "operators",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:operators/set",
+        "description": "Set all oped players",
+        "params": [
+          {
+            "name": "operators",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/operator"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "operators",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:operators/add",
+        "description": "Op players",
+        "params": [
+          {
+            "name": "add",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/operator"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "operators",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:operators/remove",
+        "description": "Deop players",
+        "params": [
+          {
+            "name": "remove",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/player"
+              },
+              "type": "array"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "operators",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:operators/clear",
+        "description": "Deop all players",
+        "params": [],
+        "result": {
+          "name": "operators",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:server/status",
+        "description": "Get server status",
+        "params": [],
+        "result": {
+          "name": "status",
+          "schema": {
+            "$ref": "#/components/schemas/server_state"
+          }
+        }
+      },
+      {
+        "name": "minecraft:server/save",
+        "description": "Save server state",
+        "params": [
+          {
+            "name": "flush",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "saving",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:server/stop",
+        "description": "Stop server",
+        "params": [],
+        "result": {
+          "name": "stopping",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:server/system_message",
+        "description": "Send a system message",
+        "params": [
+          {
+            "name": "message",
+            "schema": {
+              "$ref": "#/components/schemas/system_message"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "sent",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/autosave",
+        "description": "Get whether automatic world saving is enabled on the server",
+        "params": [],
+        "result": {
+          "name": "enabled",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/autosave/set",
+        "description": "Enable or disable automatic world saving on the server",
+        "params": [
+          {
+            "name": "enable",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "enabled",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/difficulty",
+        "description": "Get the current difficulty level of the server",
+        "params": [],
+        "result": {
+          "name": "difficulty",
+          "schema": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/difficulty/set",
+        "description": "Set the difficulty level of the server",
+        "params": [
+          {
+            "name": "difficulty",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "difficulty",
+          "schema": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/enforce_allowlist",
+        "description": "Get whether allowlist enforcement is enabled (kicks players immediately when removed from allowlist)",
+        "params": [],
+        "result": {
+          "name": "enforced",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/enforce_allowlist/set",
+        "description": "Enable or disable allowlist enforcement (when enabled, players are kicked immediately upon removal from allowlist)",
+        "params": [
+          {
+            "name": "enforce",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "enforced",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/use_allowlist",
+        "description": "Get whether the allowlist is enabled on the server",
+        "params": [],
+        "result": {
+          "name": "used",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/use_allowlist/set",
+        "description": "Enable or disable the allowlist on the server (controls whether only allowlisted players can join)",
+        "params": [
+          {
+            "name": "use",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "used",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/max_players",
+        "description": "Get the maximum number of players allowed to connect to the server",
+        "params": [],
+        "result": {
+          "name": "max",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/max_players/set",
+        "description": "Set the maximum number of players allowed to connect to the server",
+        "params": [
+          {
+            "name": "max",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "max",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/pause_when_empty_seconds",
+        "description": "Get the number of seconds before the game is automatically paused when no players are online",
+        "params": [],
+        "result": {
+          "name": "seconds",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/pause_when_empty_seconds/set",
+        "description": "Set the number of seconds before the game is automatically paused when no players are online",
+        "params": [
+          {
+            "name": "seconds",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "seconds",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/player_idle_timeout",
+        "description": "Get the number of seconds before idle players are automatically kicked from the server",
+        "params": [],
+        "result": {
+          "name": "seconds",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/player_idle_timeout/set",
+        "description": "Set the number of seconds before idle players are automatically kicked from the server",
+        "params": [
+          {
+            "name": "seconds",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "seconds",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/allow_flight",
+        "description": "Get whether flight is allowed for players in Survival mode",
+        "params": [],
+        "result": {
+          "name": "allowed",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/allow_flight/set",
+        "description": "Allow or disallow flight for players in Survival mode",
+        "params": [
+          {
+            "name": "allow",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "allowed",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/motd",
+        "description": "Get the server's message of the day displayed to players",
+        "params": [],
+        "result": {
+          "name": "message",
+          "schema": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/motd/set",
+        "description": "Set the server's message of the day displayed to players",
+        "params": [
+          {
+            "name": "message",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "message",
+          "schema": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/spawn_protection_radius",
+        "description": "Get the spawn protection radius in blocks (only operators can edit within this area)",
+        "params": [],
+        "result": {
+          "name": "radius",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/spawn_protection_radius/set",
+        "description": "Set the spawn protection radius in blocks (only operators can edit within this area)",
+        "params": [
+          {
+            "name": "radius",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "radius",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/force_game_mode",
+        "description": "Get whether players are forced to use the server's default game mode",
+        "params": [],
+        "result": {
+          "name": "forced",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/force_game_mode/set",
+        "description": "Enable or disable forcing players to use the server's default game mode",
+        "params": [
+          {
+            "name": "force",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "forced",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/game_mode",
+        "description": "Get the server's default game mode",
+        "params": [],
+        "result": {
+          "name": "mode",
+          "schema": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/game_mode/set",
+        "description": "Set the server's default game mode",
+        "params": [
+          {
+            "name": "mode",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "mode",
+          "schema": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/view_distance",
+        "description": "Get the server's view distance in chunks",
+        "params": [],
+        "result": {
+          "name": "distance",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/view_distance/set",
+        "description": "Set the server's view distance in chunks",
+        "params": [
+          {
+            "name": "distance",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "distance",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/simulation_distance",
+        "description": "Get the server's simulation distance in chunks",
+        "params": [],
+        "result": {
+          "name": "distance",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/simulation_distance/set",
+        "description": "Set the server's simulation distance in chunks",
+        "params": [
+          {
+            "name": "distance",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "distance",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/accept_transfers",
+        "description": "Get whether the server accepts player transfers from other servers",
+        "params": [],
+        "result": {
+          "name": "accepted",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/accept_transfers/set",
+        "description": "Enable or disable accepting player transfers from other servers",
+        "params": [
+          {
+            "name": "accept",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "accepted",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/status_heartbeat_interval",
+        "description": "Get the interval in seconds between server status heartbeats",
+        "params": [],
+        "result": {
+          "name": "seconds",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/status_heartbeat_interval/set",
+        "description": "Set the interval in seconds between server status heartbeats",
+        "params": [
+          {
+            "name": "seconds",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "seconds",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/operator_user_permission_level",
+        "description": "Get the permission level required for operator commands",
+        "params": [],
+        "result": {
+          "name": "level",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/operator_user_permission_level/set",
+        "description": "Set the permission level required for operator commands",
+        "params": [
+          {
+            "name": "level",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "level",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/hide_online_players",
+        "description": "Get whether the server hides online player information from status queries",
+        "params": [],
+        "result": {
+          "name": "hidden",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/hide_online_players/set",
+        "description": "Enable or disable hiding online player information from status queries",
+        "params": [
+          {
+            "name": "hide",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "hidden",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/status_replies",
+        "description": "Get whether the server responds to connection status requests",
+        "params": [],
+        "result": {
+          "name": "enabled",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/status_replies/set",
+        "description": "Enable or disable the server responding to connection status requests",
+        "params": [
+          {
+            "name": "enable",
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "enabled",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/entity_broadcast_range",
+        "description": "Get the entity broadcast range as a percentage",
+        "params": [],
+        "result": {
+          "name": "percentage_points",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:serversettings/entity_broadcast_range/set",
+        "description": "Set the entity broadcast range as a percentage",
+        "params": [
+          {
+            "name": "percentage_points",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "percentage_points",
+          "schema": {
+            "type": "integer"
+          }
+        }
+      },
+      {
+        "name": "minecraft:gamerules",
+        "description": "Get the available game rule keys and their current values",
+        "params": [],
+        "result": {
+          "name": "gamerules",
+          "schema": {
+            "items": {
+              "$ref": "#/components/schemas/typed_game_rule"
+            },
+            "type": "array"
+          }
+        }
+      },
+      {
+        "name": "minecraft:gamerules/update",
+        "description": "Update game rule value",
+        "params": [
+          {
+            "name": "gamerule",
+            "schema": {
+              "$ref": "#/components/schemas/untyped_game_rule"
+            },
+            "required": true
+          }
+        ],
+        "result": {
+          "name": "gamerule",
+          "schema": {
+            "$ref": "#/components/schemas/typed_game_rule"
+          }
+        }
+      },
+      {
+        "name": "notification:server/started",
+        "description": "Server started",
+        "params": []
+      },
+      {
+        "name": "notification:server/stopping",
+        "description": "Server shutting down",
+        "params": []
+      },
+      {
+        "name": "notification:server/saving",
+        "description": "Server save started",
+        "params": []
+      },
+      {
+        "name": "notification:server/saved",
+        "description": "Server save completed",
+        "params": []
+      },
+      {
+        "name": "notification:players/joined",
+        "description": "Player joined",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/player"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:players/left",
+        "description": "Player left",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/player"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:operators/added",
+        "description": "Player was oped",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:operators/removed",
+        "description": "Player was deoped",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/operator"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:allowlist/added",
+        "description": "Player was added to allowlist",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/player"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:allowlist/removed",
+        "description": "Player was removed from allowlist",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/player"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:ip_bans/added",
+        "description": "Ip was added to ip ban list",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/ip_ban"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:ip_bans/removed",
+        "description": "Ip was removed from ip ban list",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:bans/added",
+        "description": "Player was added to ban list",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/user_ban"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:bans/removed",
+        "description": "Player was removed from ban list",
+        "params": [
+          {
+            "name": "player",
+            "schema": {
+              "$ref": "#/components/schemas/player"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:gamerules/updated",
+        "description": "Gamerule was changed",
+        "params": [
+          {
+            "name": "gamerule",
+            "schema": {
+              "$ref": "#/components/schemas/typed_game_rule"
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "notification:server/status",
+        "description": "Server status heartbeat",
+        "params": [
+          {
+            "name": "status",
+            "schema": {
+              "$ref": "#/components/schemas/server_state"
+            },
+            "required": true
+          }
+        ]
+      }
+    ],
+    "components": {
+      "schemas": {
+        "untyped_game_rule": {
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "incoming_ip_ban": {
+          "properties": {
+            "reason": {
+              "type": "string"
+            },
+            "expires": {
+              "type": "string"
+            },
+            "ip": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "player": {
+              "$ref": "#/components/schemas/player"
+            }
+          },
+          "type": "object"
+        },
+        "system_message": {
+          "properties": {
+            "receivingPlayers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/player"
+              }
+            },
+            "overlay": {
+              "type": "boolean"
+            },
+            "message": {
+              "$ref": "#/components/schemas/message"
+            }
+          },
+          "type": "object"
+        },
+        "kick_player": {
+          "properties": {
+            "players": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/player"
+              }
+            },
+            "message": {
+              "$ref": "#/components/schemas/message"
+            }
+          },
+          "type": "object"
+        },
+        "ip_ban": {
+          "properties": {
+            "reason": {
+              "type": "string"
+            },
+            "expires": {
+              "type": "string"
+            },
+            "ip": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "typed_game_rule": {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "integer",
+                "boolean"
+              ]
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "user_ban": {
+          "properties": {
+            "reason": {
+              "type": "string"
+            },
+            "expires": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "player": {
+              "$ref": "#/components/schemas/player"
+            }
+          },
+          "type": "object"
+        },
+        "message": {
+          "properties": {
+            "translatable": {
+              "type": "string"
+            },
+            "translatableParams": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "literal": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "version": {
+          "properties": {
+            "protocol": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "server_state": {
+          "properties": {
+            "players": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/player"
+              }
+            },
+            "started": {
+              "type": "boolean"
+            },
+            "version": {
+              "$ref": "#/components/schemas/version"
+            }
+          },
+          "type": "object"
+        },
+        "operator": {
+          "properties": {
+            "permissionLevel": {
+              "type": "integer"
+            },
+            "bypassesPlayerLimit": {
+              "type": "boolean"
+            },
+            "player": {
+              "$ref": "#/components/schemas/player"
+            }
+          },
+          "type": "object"
+        },
+        "player": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      }
+    }
+  }
+}
