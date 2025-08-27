@@ -1,3 +1,7 @@
+mod methods;
+mod schemas;
+mod notifications;
+
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
